@@ -1,0 +1,118 @@
+//SETUP BOX LAYOUT
+$container-max-width: 100%;
+$container-width: 1060px; //$container-width = container (đo từ bản thiết kế) + 30px
+
+/*GRID - MEDIA QUERIES BREAKPOINTS*/
+$xxs-min: 576px; // ==>FLEX
+$xs-min: 768px; //FIXED
+$sm-min: 992px; //FIXED
+$md-min: 1200px; //FIXED
+$lg-min: 1440px; // ==>FLEX
+
+$xxs-max: ($xxs-min - 1); // Small Mobile
+$xs-max: ($xs-min - 1); // Mobile
+$sm-max: ($sm-min - 1); // Tablet
+$md-max: ($md-min - 1); // Desktop
+$lg-max: ($lg-min - 1); // Large Desktop
+
+//COLOR - TUỲ CHỈNH (FIXED)
+$white-cl: #fff;
+$black-cl: #000;
+$gray-cl: #aaaaaa;
+$yellow-cl: #caa348;
+$primary-cl: #132539;
+$second-cl: #6d521a;
+
+// ==> GRADIENT SETUP <== // (None)
+
+//FONT
+
+//TRANSITION
+// ==> Responsive Trans <== //
+$res-trans: 0.4s;
+// ==> Animation Trans <== //
+$trans: all 0.8s;
+// ==> Acceleration <== //
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+// <== ========================================================================= ==> //
+:root {
+  //H1 None
+
+  //H2
+  --h2-fs: 8rem;
+  --h2-lh: 2rem;
+  //H3
+  --h3-fs: 4.4rem;
+  --h3-lh: 5.045rem;
+  --h3-ltspc: 4.4px;
+
+  --h4-fs: 2.6rem;
+  --h4-lh: 5.045rem;
+  --h4-ltspc: 2.6px;
+
+  --h5-fs: 2rem;
+  --h5-lh: 3rem;
+
+  --body16-fs: 1.6rem;
+  --body16-lh: 2.6rem;
+
+  --body14-fs: 1.4rem;
+  --body14-lh: 2.2rem;
+
+  //HOME TEXT
+  --home10-fs: 1rem;
+  --home10-lh: 2.605rem;
+  --home10-ltspc: 2px;
+
+  --home11-fs: 1.1rem;
+  --home11-lh20: 2rem;
+  --home11-lh26: 2.6rem;
+  --home11-lh30: 3rem;
+  --home11-lh40: 4rem;
+  --home11-ltspc: 0.6px;
+  --home11-ltspc-lv0: 1.1px;
+  --home11-ltspc50: 0.55px;
+
+  --home12-fs: 1.2rem;
+  --home12-lh26: 2.6rem;
+  --home12-lh40: 4rem;
+  --home12-lh30: 3rem;
+  --home12-ltspc: -0.3px;
+
+  --home18-fs: 1.8rem;
+  --home18-lh40: 4rem;
+  --home18-lh43: 4.3rem;
+  --home18-ltspc: 0.9px;
+
+  //ABOUT TEXT
+  --about11-fs: 1.1rem;
+  --about14-fs: 1.4rem;
+  --about14-lh20: 2rem;
+  --about14-lh26: 2.6rem;
+  --about14-lh40: 4rem;
+  --about14-lh46: 4.6rem;
+  --about14-ltspc: 1.4px;
+
+  // Genaral Variable
+
+  --gap: 30px; // ==> USING FOR GAP (FLEX || GRID) OR PADDING FOR CONTAINER & CONTAINER-FLUID
+
+  --height-headerscroll: 70px;
+  --height-headermobile: 110px;
+  --height-footer: 530px;
+  --height-button: 35px;
+  --ptop: 150px;
+  --pd-section: 120px;
+
+  @media (max-width: $sm-max) {
+    // Tablet
+    --ptop: 100px;
+    --h3-lh: 4.045rem;
+  }
+  @media (max-width: $xs-max) {
+    //Mobile
+    --h2-fs: 65.84px;
+    --h2-lh: 16.46px;
+  }
+}

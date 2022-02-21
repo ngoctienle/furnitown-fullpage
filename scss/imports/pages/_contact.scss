@@ -1,0 +1,34 @@
+.contact-wrap {
+  //   position: relative;
+  padding-bottom: 11.5rem;
+  .container {
+    padding-top: var(--ptop);
+    @include tablet {
+      margin-top: var(--height-headermobile);
+    }
+  }
+  input {
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ab9051;
+    width: 100%;
+    color: $white-cl;
+  }
+  textarea {
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ab9051;
+    width: 100%;
+    height: 108px;
+    resize: none;
+    color: $white-cl;
+  }
+  a {
+    margin-top: 2rem;
+    background-color: #ab9051;
+  }
+}

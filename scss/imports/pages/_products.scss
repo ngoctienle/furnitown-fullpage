@@ -1,0 +1,11 @@
+.products-wrap {
+  .product__wrapper {
+    &-list {
+      .list__grid {
+        &-card {
+          // display: none;
+        }
+      }
+    }
+  }
+}

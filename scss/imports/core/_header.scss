@@ -1,0 +1,84 @@
+// CSS HEADER
+.header {
+  @include size(100%, var(--height-headerscroll));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  &.activescroll {
+    background-color: $primary-cl;
+  }
+  @include transition($res-trans);
+  @include tablet {
+    height: var(--height-headermobile);
+    background-color: $primary-cl;
+  }
+  @include transition($trans);
+  .container-fluid {
+    height: 100%;
+    position: relative;
+    .header__scroll {
+      height: 100%;
+      @include midFlex;
+      margin-left: -4.9rem;
+      @include visible(0);
+      @include tablet {
+        display: none;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        &__item {
+          &-link {
+            padding: 0 2.5rem;
+            @include transition($trans);
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: -1rem;
+              @include transform(translateX(-50%));
+              width: 0%;
+              height: 1px;
+              background-color: $white-cl;
+              @include transition($trans);
+            }
+            &:hover {
+              color: $white-cl;
+              &::before {
+                width: calc(100% - 5rem);
+              }
+            }
+          }
+        }
+      }
+      .logo {
+        margin: 0 6rem;
+      }
+      &.active {
+        @include visible(1);
+      }
+    }
+
+    .header__mobile {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include visible(0);
+      @include transition($res-trans);
+      @include tablet {
+        @include visible(1);
+      }
+      &-left {
+        display: flex;
+        align-items: center;
+        .toggle {
+          margin-right: 2rem;
+          margin-top: unset;
+        }
+      }
+    }
+  }
+}

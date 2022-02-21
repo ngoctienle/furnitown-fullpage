@@ -1,0 +1,40 @@
+//CSS FOOTER
+.footer {
+  height: var(--height-footer);
+  background-color: $primary-cl;
+  padding-bottom: 3.5rem;
+  padding-top: 7rem;
+  .container {
+    position: relative;
+    height: 100%;
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::after,
+      &::before {
+        content: "";
+        height: 1px;
+        width: 90%;
+        background-color: #665c49;
+        display: block;
+      }
+      img {
+        margin-left: 4rem;
+        margin-right: 4rem;
+      }
+    }
+    .footer__content {
+      text-align: center;
+      margin-top: 4.6rem;
+    }
+    span {
+      position: absolute;
+      right: -5rem;
+      width: 13.5rem;
+      height: 1px;
+      background-color: #665c49;
+      @include transform(rotate(90deg));
+    }
+  }
+}

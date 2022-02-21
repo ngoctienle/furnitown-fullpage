@@ -1,0 +1,32 @@
+.news-wrap {
+  .news__hero {
+    height: 45rem;
+    padding-top: 26rem;
+  }
+  .container {
+    padding-bottom: 8rem;
+    .news__list {
+      margin-top: -3rem;
+      &-item {
+        margin-bottom: 2rem;
+        &:hover .content {
+          background-color: $second-cl;
+          @include transition($res-trans);
+        }
+        &:hover .content p {
+          color: $white-cl;
+          @include transition($res-trans);
+        }
+        &:hover .img img {
+          @include transform(scale(1.2));
+          @include transition($res-trans);
+        }
+        &:hover a span {
+          color: $white-cl;
+          @include transition($res-trans);
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}

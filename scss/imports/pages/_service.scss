@@ -1,0 +1,24 @@
+.service-wrap {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  .hero-img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .service__intro {
+    padding: 0 3rem;
+    border-bottom: 1px solid $black-cl;
+    padding-bottom: 8rem;
+    &-wrap {
+      display: flex;
+      gap: 9rem;
+      margin-top: 2rem;
+      p {
+        width: calc(50% - (9rem / 2));
+      }
+      .order {
+        margin-top: unset;
+      }
+    }
+  }
+}

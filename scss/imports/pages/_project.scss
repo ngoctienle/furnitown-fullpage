@@ -1,0 +1,68 @@
+.project-wrap {
+  padding-top: 18rem;
+  padding-bottom: 8rem;
+  .project__detail {
+    position: relative;
+    margin-top: 1rem;
+    // margin-bottom: 2rem;
+    &::before {
+      content: "";
+      background-color: $gray-cl;
+      height: 1px;
+      width: 97%;
+      position: absolute;
+      top: 10rem;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+    .dropdown {
+      margin-top: 3.5rem;
+      &__default {
+        @include midFlex;
+        height: var(--height-button);
+        background-color: $black-cl;
+        cursor: pointer;
+        img {
+          margin-left: 1rem;
+          @include size(15px);
+        }
+      }
+      &__list {
+        display: none;
+        p {
+          background-color: $second-cl;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          text-align: center;
+          cursor: pointer;
+          &:hover {
+            background-color: $gray-cl;
+          }
+        }
+      }
+    }
+  }
+  .project__list {
+    margin-top: 7rem;
+    &-item {
+      margin-bottom: 2rem;
+      &:hover .content {
+        background-color: $second-cl;
+        @include transition($res-trans);
+      }
+      &:hover .content p {
+        color: $white-cl;
+        @include transition($res-trans);
+      }
+      &:hover .img img {
+        @include transform(scale(1.2));
+        @include transition($res-trans);
+      }
+      &:hover a span {
+        color: $white-cl;
+        @include transition($res-trans);
+      }
+      cursor: pointer;
+    }
+  }
+}
